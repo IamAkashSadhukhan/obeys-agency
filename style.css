@@ -301,4 +301,53 @@ body{
     min-height: 100vh;
     width: 100%;
     /* padding: 5vw 0; */
+   position: relative;
+}
+.elem {
+    
+    white-space: nowrap;
+    /* overflow-x: auto; */
+    margin-bottom: 1vw;
+}
+.elem h1{
+    font-size: 7vw;
+    /* background-color: red; */
+    -webkit-text-stroke: 1px  #fff;
+    font-weight: 400;
+    color: transparent;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-right: 16px; /*Total 20px as 4px was already given*/
+    /* animation: name duration timing-function delay iteration-count direction fill-mode play-state; */
+
+    animation: slider 15s linear 1s infinite;
+}
+@keyframes slider {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-100% - 20px));
+    }
+}
+.elem2 {
+    
+    white-space: nowrap;
+    /* overflow-x: auto; */
+    margin-bottom: 1vw;
+}
+.elem2 h1{
+    font-size: 7vw;
+    /* background-color: red; */
+    -webkit-text-stroke: 1px  #fff;
+    font-weight: 400;
+    color: transparent;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-right: 16px; /*Total 20px as 4px was already given*/
+    /* transform:translateX(calc(-100% - 20px)); */
+    /* animation: slider 10s linear 1s infinite; */
+    animation: slider 15s linear 1s infinite;
+    animation-direction: reverse;
+
 }
