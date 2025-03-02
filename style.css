@@ -10,10 +10,14 @@ html,body{
     height: 100%;
     width: 100;
     cursor: none;
+    /* overflow: hidden; */
 }
 body{
     overflow-x: hidden;
 }
+/* html::-webkit-scrollbar, body::-webkit-scrollbar {
+    display: none;
+} */
 #crsr{
     height: 2.7vw;
     width: 2.7vw;
@@ -27,12 +31,13 @@ body{
     pointer-events: none; 
 }
 #loader{
-    height: 100%;
+    height: 100vh;
     width: 100%;
     position: fixed;
     z-index: 999;
     background-color: #0B0B0B;
     padding: 25vh 10vw;
+   
 }
 .line{
     height: fit-content;
@@ -114,7 +119,7 @@ body{
 
 }
 #page1{
-    height: 100vh;
+    height: 80vh;
     width: 100vw;
     background-color: #151515;
 }
@@ -145,11 +150,12 @@ body{
     overflow: hidden;
     display: flex;
     align-items: center;
-    position: relative;
+    /* position: relative; */
     z-index: 999999;
 
 
 }
+
 .hero:nth-child(2){
     margin-top: 18vh;
 }
@@ -158,8 +164,18 @@ body{
     font-weight: 600;
     text-transform: uppercase;
     line-height: 7.2vw;
+    position: relative;
+}
 
-
+#hero1::before{
+    content: "01";
+    position: absolute;
+    font-size: 3vw;
+    font-family: "silk serif";
+    font-weight: 100;
+    left: 20%;
+    top: 29%;
+    
 }
 .hero h3,.hero h2{
     font-size: 7.2vw;
@@ -243,8 +259,19 @@ body{
 #page4-content h1{
     font-size: 7vw;
     text-transform:uppercase;
+    position: relative;
 
 }
+#page4-content h1::before{
+    content: "03";
+    position: absolute;
+    font-size: 3vw;
+   font-family: "silk serif";
+   font-weight: 100;
+   left: -12%;
+   top: 7%;
+}
+
 #page4-content .underline{
     height: 1px;
     width: 100%;
@@ -307,7 +334,7 @@ body{
     
     white-space: nowrap;
     /* overflow-x: auto; */
-    margin-bottom: 1vw;
+    margin-bottom: -2vw;
 }
 .elem h1{
     font-size: 7vw;
@@ -334,7 +361,7 @@ body{
     
     white-space: nowrap;
     /* overflow-x: auto; */
-    margin-bottom: 1vw;
+    margin-bottom: -2vw;
 }
 .elem2 h1{
     font-size: 7vw;
@@ -351,3 +378,68 @@ body{
     animation-direction: reverse;
 
 }
+.elem span,.elem2 span{
+    font-style: italic;
+    font-family: 'silk serif';
+    -webkit-text-stroke: 1px  #fff;
+    color:transparent
+}
+#footer{
+    height: 88vh;
+    width: 100%;
+    /* background-color: red; */
+    position: relative;
+    padding-left: 28vw;
+    padding-right: 2vw;
+    
+}
+#footer h1{
+    font-size: 7vw;
+    /* width: 60vw; */
+    /* background-color: blue; */
+    text-transform: uppercase;
+    position: relative;
+    
+}
+#footer h1::before{
+    content: "04";
+    position: absolute;
+    font-size: 3vw;
+   font-family: "silk serif";
+   font-weight: 100;
+   left: -12%;
+   top: 7%;
+}
+.underline{
+    height: 1px;
+    width: 100%;
+    background-color: #fff;
+    margin: 3vw 0;
+}
+
+#footer-div{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    padding-right:  15vw;
+    padding-top: 4vw;
+    /* margin-bottom: 3vw; */
+}
+#footer-div h6{
+    font-size: 0.9vw;
+    margin-bottom: 1.5vw;
+    font-weight: 500;
+}
+.box{
+    width: 20%;
+}
+#footer-div h5{
+    font-size: 1.3vw;
+    /* margin: 0.2vh 0; */
+    font-weight: 500;
+}
+#footer>h5{
+    font-weight: 500;
+    font-size: 1vw;
+}
+

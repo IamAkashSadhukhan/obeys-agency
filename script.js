@@ -7,6 +7,22 @@ tl.from(".line h1",{
     delay: 0.5,
 
 });
+/*<div id="loader">
+        <div class="line">
+            <div id="line1-part1">
+                <h5>00</h5>
+                <h6>- 100</h6>
+            </div>
+            <h1>YOUR</h1>
+        </div>
+        <div class="line">
+            <h1>Web Experiences</h1>
+        </div>
+        <div class="line">
+            <h1>is loading right</h1>
+            <h2>Now</h2>
+        </div>
+*/
 tl.from("#line1-part1, .line h2",{
     opacity: 0,
     onStart: function(){
@@ -74,6 +90,10 @@ navItems.forEach((item) => {
 
 }
 loadingAnimation();
+// window.addEventListener("load", function() {
+//     document.body.style.overflowY = "auto"; // Enable only vertical scrolling
+//     document.body.style.overflowX = "hidden"; // Keep horizontal scrolling disabled
+// });
 cursorAnimation()
 
 
