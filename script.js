@@ -240,6 +240,3 @@ function footerAnimation() {
 }
 
 footerAnimation()
-
-
-
