@@ -65,7 +65,7 @@ tl.from("#page1", {
 tl.to("#loader",{
     display: "none"
 })
-tl.from('#nav',{
+tl.from('#navbar',{
     opacity: 0,
 })
 
@@ -79,10 +79,23 @@ tl.from("#hero1, #page2",{
 
 }
 function cursorAnimation(){
+    Shery.makeMagnet("#nav-part2 h4");
+const cursor = document.querySelector('#crsr');
+const navItems = document.querySelectorAll("#nav-part2 h4");  
+navItems.forEach((item) => {
+item.addEventListener('mouseenter', () => {
+    cursor.style.width = '4vw';
+    cursor.style.height = '4vw';
+    console.log("Hello");
+});
+item.addEventListener('mouseleave', () => {
+    cursor.style.width = '2.7vw';
+    cursor.style.height = '2.7vw';
+});
+}); 
     let crsr = document.querySelector("#crsr");
     let vdo_cntr = document.querySelector("#video-container");
     let vdo_crsr = document.querySelector("#video-cursor");
-    
     
     vdo_cntr.addEventListener("mouseenter",() => {
         crsr.style.opacity = '0';
@@ -132,21 +145,9 @@ function cursorAnimation(){
             top:val.y,
         })
     });
-    Shery.makeMagnet("#nav-part2 h4");
-    const cursor = document.querySelector('#crsr');
-    const navItems = document.querySelectorAll("#nav-part2 h4");  
-    navItems.forEach((item) => {
-    item.addEventListener('mouseenter', () => {
-        cursor.style.width = '4vw';
-        cursor.style.height = '4vw';
-    });
-    item.addEventListener('mouseleave', () => {
-        cursor.style.width = '2.7vw';
-        cursor.style.height = '2.7vw';
-    });
     
     
-});
+
 
 }
 function shreyAnimation(){
